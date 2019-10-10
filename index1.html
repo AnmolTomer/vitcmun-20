@@ -46,8 +46,8 @@ body, h1,h2,h3,h4,h5,h6, {font-family: "Century Gothic", sans-serif}
   float:left;
   width: 40%;
   border-radius: 15px;
-  padding-left: 5px; 
-  font-size: 22px; 
+  padding-left: 5px;
+  font-size: 22px;
   font-family: "Century Gothic", sans-serif
 }
 
@@ -70,7 +70,8 @@ a { color: white; text-decoration: none; }
 body{background-color:#000; overflow:hidden;}
 
 .scroll-down {
-  position: absolute;
+  overflow : auto;
+  position : relative;
   left: 50%;
   bottom: 10%;
   display: block;
@@ -274,6 +275,11 @@ body{background-color:#000; overflow:hidden;}
   }
 }
 
+/*For outer division of map*/
+.mapouter{
+  opacity=0;
+}
+
 @media only screen and (min-device-width:800px){
     .change_0{
         width : 30%;
@@ -283,7 +289,7 @@ body{background-color:#000; overflow:hidden;}
 
     .change_1{
         font-size: 35px;
-        text-align: center; 
+        text-align: center;
     }
 }
 
@@ -351,7 +357,7 @@ body{background-color:#000; overflow:hidden;}
     <!--p style="font-size: 50px;" id="timer"></p-->
   <!--/div--> <!--Remove this tag when decommenting the code-->
 </div>
-<div id="button" class="scroll-down" onclick="scrollWin(0,1000)"></div> 
+<div id="button" class="scroll-down" onclick="scrollWin(0,1000)"></div>
 <!-- Footer -->
       <!--<section id="footer">
         <ul class="icons">
@@ -378,7 +384,7 @@ body{background-color:#000; overflow:hidden;}
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:80%"></div>
     </div><br>
-    
+
     <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
       <div class="w3-quarter w3-section">
         <span class="w3-xlarge">11+</span><br>
@@ -401,7 +407,7 @@ body{background-color:#000; overflow:hidden;}
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
       <i class="fa fa-download"></i> Download Resume
     </button-->
-    
+
     <!-- Grid for pricing tables -->
     <!--h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -440,19 +446,19 @@ body{background-color:#000; overflow:hidden;}
       </div>
     <End Grid/Pricing tables>
     </div-->
-    
+
     <!-- Testimonials -->
-    <!--h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <!--h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>
     <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
     <p>Jane Doe saved us from a web disaster.</p><br>
-    
+
     <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
     <p>No one is better than Jane Doe.</p-->
   <!-- End About Section -->
   <!--/div-->
-  
+
   <!-- Portfolio Section -->
   <!--div class="w3-padding-64 w3-content" id="photos">
     <h2 class="w3-text-light-grey">My Photos</h2>
@@ -507,37 +513,35 @@ body{background-color:#000; overflow:hidden;}
 <section>
       <div class="mapouter">
           <div class="gmap_canvas">
-            <iframe width="2000" height="500" src="https://maps.google.com/maps?q=Vit%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            <a href="https://www.embedgooglemap.org">embedgooglemap.org</a>
+            <iframe src="https://maps.google.com/maps?q=Vit%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" width="530" height="500" frameborder="0" style="border:0"></iframe>
+            <!--a href="https://www.embedgooglemap.org">embedgooglemap.org</a
+              NOT REQUIRED !! -->
           </div>
             <style>
-              .mapouter{
-                  position:sticky;
-                  text-align:right;
-                  height:500px;width:2000px;
-                  }
-              
+
               .gmap_canvas {
-                overflow:hidden;
-                background:none!important;
-                height:500px;
-                width:2000px;
+                position: relative;
+                padding-bottom: 75%; // This is the aspect ratio
+                height: 0;
+                overflow: hidden;
                 }
-      
-              .mapouter{
-                opacity=0;    
-                }
-      
-                @media on screen (max-width: 750px;){
+
+
+                /*@media on screen (max-width: 750px;){
                   .mapouter{
                     height:100px!important;
                     width:1000px!important;
                   }
-              
-                .gmap_canvas {
-                  height:200px;
-                  width:1000px;
+                we can do it without this
+                */
+              .gmap_canvas iframe {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100% !important;
+                  height: 100% !important;
                 }
+
               }
 
             </style>
@@ -551,71 +555,70 @@ body{background-color:#000; overflow:hidden;}
           <img src="images/logosmall.jpg" height=35% width=35% alt="VITCMUN">
           <p class="footer-company-name">VIT Chennai © 2019</p>
         </div>
-  
+
         <div class="footer-center">
           <div>
             <a href="https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en""><i class="fa fa-map-marker w3-hover-opacity"></i>
             <p><span>VIT Chennai</span> Vandalur-Kelambakkam Road, Chennai</p></a>
           </div>
-  
+
           <div>
             <i class="fa fa-phone w3-hover-opacity"></i>
             <p>+91-8939966294</p>
           </div>
-  
+
           <div>
             <a href="mailto:contact@vitcmun.in"><i class="fa fa-envelope w3-hover-opacity"></i>
             <p>contact@vitcmun.in</a></p>
           </div>
-  
+
         </div>
-  
+
         <div class="footer-right">
-  
-  
+
+
           <div class="footer-icons">
-  
+
             <a href="https://www.facebook.com/vitcmun/"><i class="fa fa-facebook fa-2x w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h"><i class="fa fa-instagram fa-2x w3-hover-opacity"></i></a>
-  
+
           </div>
-  
+
         </div>
-  
+
       </footer>
     <!--   <iframe width="600" height="450" frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZx9Jjq9ZUjoRLX11GxNCS5Q&key=..." allowfullscreen></iframe> -->  
+    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZx9Jjq9ZUjoRLX11GxNCS5Q&key=..." allowfullscreen></iframe> -->
         <!-- Footer -->
         <!--
       <div class="footer">
-        <footer> 
+        <footer>
         <div class="contact">Contact Us
           <br>
-        
+
         <i class="fa fa-phone w3-hover-opacity"></i> &nbsp;: &nbsp; +91-8939966294
-        <br> 
-        <a href = "https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en"  class="fa fa-map-marker w3-hover-opacity" style="text-decoration:none "> &nbsp;</a> : &nbsp; 
+        <br>
+        <a href = "https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en"  class="fa fa-map-marker w3-hover-opacity" style="text-decoration:none "> &nbsp;</a> : &nbsp;
         <span style="font-family: 'Century Gothic'">VIT Chennai, Vandalur- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelabakkam Road, Chennai</span>
-      
+
       </div>
       <div class="social">Follow Us on Social Media
           <br>
         <a href="https://www.facebook.com/vitcmun/" style="text-decoration:none" class="fa fa-facebook w3-hover-opacity fa-2x"></a>
         &nbsp;&nbsp;&nbsp;
         <a href = "https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h" style="text-decoration:none" class="fa fa-instagram w3-hover-opacity fa-2x"></a>
-      
+
     </footer>
       </div>-->
     <!-- END PAGE CONTENT -->
     <!--/div-->
   </section>
   <script>
-      
+
       function scrollWin(x,y) {
       window.scrollBy(x, y);
       }
-    
+
   </script>
 </body>
 </html>
-    

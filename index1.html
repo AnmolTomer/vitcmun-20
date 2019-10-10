@@ -254,7 +254,7 @@ body{background-color:#000; overflow:hidden;}
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 880px) {
+@media (max-width: 750px) {
 
   .footer-distributed{
     font: bold 14px sans-serif;
@@ -272,13 +272,7 @@ body{background-color:#000; overflow:hidden;}
   .footer-distributed .footer-center i{
     margin-left: 0;
   }
-
 }
-
-.mapouter{
-  opacity=0;
-}
-
 
 @media only screen and (min-device-width:800px){
     .change_0{
@@ -301,9 +295,8 @@ body{background-color:#000; overflow:hidden;}
 }
 </style>
 
-
 <body class="w3-black">
-
+<section>
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <!--nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center"-->
   <!-- Avatar image in top left corner -->
@@ -336,7 +329,7 @@ body{background-color:#000; overflow:hidden;}
   </div>
 </div-->
 
-<!-- Page Content -->
+  <!-- Page Content -->
 <div class="w3-center" height=100%>
     <div class="w3-padding-large" id="main">
         <!-- Header/Home -->
@@ -357,7 +350,8 @@ body{background-color:#000; overflow:hidden;}
     <!--hr style="width:200px" class="w3-opacity"-->
     <!--p style="font-size: 50px;" id="timer"></p-->
   <!--/div--> <!--Remove this tag when decommenting the code-->
-</div> 
+</div>
+<div id="button" class="scroll-down" onclick="scrollWin(0,1000)"></div> 
 <!-- Footer -->
       <!--<section id="footer">
         <ul class="icons">
@@ -508,82 +502,120 @@ body{background-color:#000; overflow:hidden;}
     </form-->
   <!-- End Contact Section -->
   <!--/div-->
-<br /> <br /> <br /> 
-  <div class="scroll-down" onclick="scrollWin(0,1000)"></div>
-  <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
-  <div class="mapouter"><div class="gmap_canvas"><iframe width="2000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Vit%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.org">embedgooglemap.org</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:2000px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:2000px;}</style></div>
- <br /> <br />
+</section>
+<br><br><br><br><br><br>
+<section>
+      <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="2000" height="500" src="https://maps.google.com/maps?q=Vit%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://www.embedgooglemap.org">embedgooglemap.org</a>
+          </div>
+            <style>
+              .mapouter{
+                  position:sticky;
+                  text-align:right;
+                  height:500px;width:2000px;
+                  }
+              
+              .gmap_canvas {
+                overflow:hidden;
+                background:none!important;
+                height:500px;
+                width:2000px;
+                }
+      
+              .mapouter{
+                opacity=0;    
+                }
+      
+                @media on screen (max-width: 750px;){
+                  .mapouter{
+                    height:100px!important;
+                    width:1000px!important;
+                  }
+              
+                .gmap_canvas {
+                  height:200px;
+                  width:1000px;
+                }
+              }
 
-<footer class="footer-distributed">
+            </style>
+        </div>
+       <br /> <br /><br />
+</section>
 
-      <div class="footer-left">
-
-        <img src="images/logosmall.jpg" height=35% width=35% alt="VITCMUN">
-        <p class="footer-company-name">VIT Chennai © 2019</p>
+<section>
+  <footer class="footer-distributed">
+        <div class="footer-left">
+          <img src="images/logosmall.jpg" height=35% width=35% alt="VITCMUN">
+          <p class="footer-company-name">VIT Chennai © 2019</p>
+        </div>
+  
+        <div class="footer-center">
+          <div>
+            <a href="https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en""><i class="fa fa-map-marker w3-hover-opacity"></i>
+            <p><span>VIT Chennai</span> Vandalur-Kelambakkam Road, Chennai</p></a>
+          </div>
+  
+          <div>
+            <i class="fa fa-phone w3-hover-opacity"></i>
+            <p>+91-8939966294</p>
+          </div>
+  
+          <div>
+            <a href="mailto:contact@vitcmun.in"><i class="fa fa-envelope w3-hover-opacity"></i>
+            <p>contact@vitcmun.in</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+  
+          <div class="footer-icons">
+  
+            <a href="https://www.facebook.com/vitcmun/"><i class="fa fa-facebook fa-2x w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h"><i class="fa fa-instagram fa-2x w3-hover-opacity"></i></a>
+  
+          </div>
+  
+        </div>
+  
+      </footer>
+    <!--   <iframe width="600" height="450" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZx9Jjq9ZUjoRLX11GxNCS5Q&key=..." allowfullscreen></iframe> -->  
+        <!-- Footer -->
+        <!--
+      <div class="footer">
+        <footer> 
+        <div class="contact">Contact Us
+          <br>
+        
+        <i class="fa fa-phone w3-hover-opacity"></i> &nbsp;: &nbsp; +91-8939966294
+        <br> 
+        <a href = "https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en"  class="fa fa-map-marker w3-hover-opacity" style="text-decoration:none "> &nbsp;</a> : &nbsp; 
+        <span style="font-family: 'Century Gothic'">VIT Chennai, Vandalur- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelabakkam Road, Chennai</span>
+      
       </div>
-
-      <div class="footer-center">
-
-        <div>
-          <a href="https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en""><i class="fa fa-map-marker w3-hover-opacity"></i>
-          <p><span>VIT Chennai</span> Vandalur-Kelambakkam Road, Chennai</p></a>
-        </div>
-
-        <div>
-          <i class="fa fa-phone w3-hover-opacity"></i>
-          <p>+91-8939966294</p>
-        </div>
-
-        <div>
-          <a href="mailto:contact@vitcmun.in"><i class="fa fa-envelope w3-hover-opacity"></i>
-          <p>contact@vitcmun.in</a></p>
-        </div>
-
-      </div>
-
-      <div class="footer-right">
-
-
-        <div class="footer-icons">
-
-          <a href="https://www.facebook.com/vitcmun/"><i class="fa fa-facebook fa-2x w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h"><i class="fa fa-instagram fa-2x w3-hover-opacity"></i></a>
-
-        </div>
-
-      </div>
-
+      <div class="social">Follow Us on Social Media
+          <br>
+        <a href="https://www.facebook.com/vitcmun/" style="text-decoration:none" class="fa fa-facebook w3-hover-opacity fa-2x"></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href = "https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h" style="text-decoration:none" class="fa fa-instagram w3-hover-opacity fa-2x"></a>
+      
     </footer>
-<!--   <iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZx9Jjq9ZUjoRLX11GxNCS5Q&key=..." allowfullscreen></iframe> -->  
-    <!-- Footer -->
-    <!--
-  <div class="footer">
-   <footer> 
-    <div class="contact">Contact Us
-      <br>
+      </div>-->
+    <!-- END PAGE CONTENT -->
+    <!--/div-->
+  </section>
+  <script>
+      
+      function scrollWin(x,y) {
+      window.scrollBy(x, y);
+      }
     
-    <i class="fa fa-phone w3-hover-opacity"></i> &nbsp;: &nbsp; +91-8939966294
-    <br> 
-    <a href = "https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en"  class="fa fa-map-marker w3-hover-opacity" style="text-decoration:none "> &nbsp;</a> : &nbsp; 
-    <span style="font-family: 'Century Gothic'">VIT Chennai, Vandalur- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelabakkam Road, Chennai</span>
-  
-  </div>
-  <div class="social">Follow Us on Social Media
-      <br>
-    <a href="https://www.facebook.com/vitcmun/" style="text-decoration:none" class="fa fa-facebook w3-hover-opacity fa-2x"></a>
-    &nbsp;&nbsp;&nbsp;
-    <a href = "https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h" style="text-decoration:none" class="fa fa-instagram w3-hover-opacity fa-2x"></a>
-  
-</footer>
-  </div>-->
-<!-- END PAGE CONTENT -->
-<!--/div-->
-<script>
-function scrollWin(x,y) {
-  window.scrollBy(x, y);
-
-}
-</script>
+  </script>
 </body>
 </html>
+    

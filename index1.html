@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html>
+<title>VITCMUN 2020</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century Gothic">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+
+body, h1,h2,h3,h4,h5,h6, {font-family: "Century Gothic", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+.change_0{
+    width:50%;
+    height: 50%;
+}
+
+.change_1{
+    color:#FCCC00;
+    font-size: 15px;
+}
+
+.footer{
+  position:;
+  width:100%;
+  border-top: 2px solid white;
+  bottom:25px;
+  font-size:22px;
+  padding-left: 400px;
+  padding-top: 10px;
+  padding-right: 400px;
+
+}
+
+.contact{
+  float:left;
+  width: 40%;
+  border-radius: 15px;
+  padding-left: 5px; 
+  font-size: 22px; 
+  font-family: "Century Gothic", sans-serif
+}
+
+
+.social{
+  float:right;
+  width: 30%;
+  font-size:22px;
+  border-radius: 15px;
+  padding-right: 5px;
+
+}
+
+@bg: #2d2d37; // Dark blue
+@primary: #fd6b21; // Orange
+
+body { background: @bg;}
+a { color: white; text-decoration: none; }
+
+body{background-color:#000; overflow:hidden;}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 180px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 27px;
+  height: 27px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation:    fade_move_down 4s ease-in-out infinite;
+  animation:         fade_move_down 4s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Century+Gothic:400,500,300,700);
+
+* {
+  font-family: Century Gothic;
+}
+
+
+.footer-distributed{
+  background: #000000;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Century Gothic', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:20px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+    border-radius: 50%;
+
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color:  #000000;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+.mapouter{
+  opacity=0;
+}
+
+
+@media only screen and (min-device-width:800px){
+    .change_0{
+        width : 30%;
+        height : 30%;
+        text-align :center;
+    }
+
+    .change_1{
+        font-size: 35px;
+        text-align: center; 
+    }
+}
+
+@font-face {
+  font-family: 'Fabulist Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Fabulist Regular'), url('Fabulist_Personal_use.woff') format('woff');
+}
+</style>
+
+
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<!--nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center"-->
+  <!-- Avatar image in top left corner -->
+  <!--img src="/w3images/avatar_smoke.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav-->
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<!--div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div-->
+
+<!-- Page Content -->
+<div class="w3-center" height=100%>
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+          <!-- <h1 class="w3-jumbo"><span class="w3-hide-small">VITCMUN'20</h1> -->
+          <!-- <p>Photographer and Web Designer.</p> -->
+        </header>
+      </div> <!--Remove this tag when decommenting the code-->
+
+  <!-- About Section -->
+  <!--div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about"-->
+    <img src="images/logo.jpg" alt="VITCMUN" class="change_0" >
+        <p><h1 class="change_1" style="font-family:'Fabulist Regular';font-weight:bolder ;font-size:42px; color:#ffffff">
+            Coming Soon
+                <!-- <p class="chotabheem" id="timer">Coming Soon</p> -->
+        </h1></p>
+    <!--h2 class="w3-text-light-grey w3-center">Countdown Timer</h2-->
+    <!--hr style="width:200px" class="w3-opacity"-->
+    <!--p style="font-size: 50px;" id="timer"></p-->
+  <!--/div--> <!--Remove this tag when decommenting the code-->
+</div> 
+<!-- Footer -->
+      <!--<section id="footer">
+        <ul class="icons">
+          <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+          <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </section>-->
+    <!--h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Photography</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Web Design</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Photoshop</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
+    </div>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button-->
+    
+    <!-- Grid for pricing tables -->
+    <!--h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    <End Grid/Pricing tables>
+    </div-->
+    
+    <!-- Testimonials -->
+    <!--h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <p>Jane Doe saved us from a web disaster.</p><br>
+    
+    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+    <p>No one is better than Jane Doe.</p-->
+  <!-- End About Section -->
+  <!--/div-->
+  
+  <!-- Portfolio Section -->
+  <!--div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity"-->
+
+    <!-- Grid for photos -->
+    <!--div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/rocks.jpg" style="width:100%">
+        <img src="/w3images/sailboat.jpg" style="width:100%">
+      </div-->
+
+      <!--div class="w3-half">
+        <img src="/w3images/underwater.jpg" style="width:100%">
+        <img src="/w3images/chef.jpg" style="width:100%">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/p6.jpg" style="width:100%">
+      </div-->
+    <!-- End photo grid -->
+    <!--/div-->
+  <!-- End Portfolio Section -->
+  <!--/div-->
+
+  <!-- Contact Section -->
+  <!--div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form-->
+  <!-- End Contact Section -->
+  <!--/div-->
+<br /> <br /> <br /> 
+  <div class="scroll-down" onclick="scrollWin(0,1000)"></div>
+  <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+  <div class="mapouter"><div class="gmap_canvas"><iframe width="2000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Vit%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.org">embedgooglemap.org</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:2000px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:2000px;}</style></div>
+ <br /> <br />
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <img src="images/logosmall.jpg" height=35% width=35% alt="VITCMUN">
+        <p class="footer-company-name">VIT Chennai © 2019</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <a href="https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en""><i class="fa fa-map-marker w3-hover-opacity"></i>
+          <p><span>VIT Chennai</span> Vandalur-Kelambakkam Road, Chennai</p></a>
+        </div>
+
+        <div>
+          <i class="fa fa-phone w3-hover-opacity"></i>
+          <p>+91-8939966294</p>
+        </div>
+
+        <div>
+          <a href="mailto:contact@vitcmun.in"><i class="fa fa-envelope w3-hover-opacity"></i>
+          <p>contact@vitcmun.in</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+
+        <div class="footer-icons">
+
+          <a href="https://www.facebook.com/vitcmun/"><i class="fa fa-facebook fa-2x w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h"><i class="fa fa-instagram fa-2x w3-hover-opacity"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+<!--   <iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJZx9Jjq9ZUjoRLX11GxNCS5Q&key=..." allowfullscreen></iframe> -->  
+    <!-- Footer -->
+    <!--
+  <div class="footer">
+   <footer> 
+    <div class="contact">Contact Us
+      <br>
+    
+    <i class="fa fa-phone w3-hover-opacity"></i> &nbsp;: &nbsp; +91-8939966294
+    <br> 
+    <a href = "https://www.google.com/maps/place/VIT+Chennai/@12.840641,80.1512343,17z/data=!3m1!4b1!4m5!3m4!1s0x3a5259af8e491f67:0x944b42131b757d2d!8m2!3d12.840641!4d80.1534283?hl=en"  class="fa fa-map-marker w3-hover-opacity" style="text-decoration:none "> &nbsp;</a> : &nbsp; 
+    <span style="font-family: 'Century Gothic'">VIT Chennai, Vandalur- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelabakkam Road, Chennai</span>
+  
+  </div>
+  <div class="social">Follow Us on Social Media
+      <br>
+    <a href="https://www.facebook.com/vitcmun/" style="text-decoration:none" class="fa fa-facebook w3-hover-opacity fa-2x"></a>
+    &nbsp;&nbsp;&nbsp;
+    <a href = "https://instagram.com/vitcmun?igshid=8wq3pwuoxk4h" style="text-decoration:none" class="fa fa-instagram w3-hover-opacity fa-2x"></a>
+  
+</footer>
+  </div>-->
+<!-- END PAGE CONTENT -->
+<!--/div-->
+<script>
+function scrollWin(x,y) {
+  window.scrollBy(x, y);
+
+}
+</script>
+</body>
+</html>

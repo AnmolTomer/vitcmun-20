@@ -3,6 +3,7 @@
 <title>VITCMUN 2020</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="width=device-width, initial-scale=1" name="viewport">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century Gothic">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -302,7 +303,7 @@ body{background-color:#000; overflow:hidden;}
 </style>
 
 <body class="w3-black">
-<section>
+<section class="section-responsive">
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <!--nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center"-->
   <!-- Avatar image in top left corner -->
@@ -357,7 +358,7 @@ body{background-color:#000; overflow:hidden;}
     <!--p style="font-size: 50px;" id="timer"></p-->
   <!--/div--> <!--Remove this tag when decommenting the code-->
 </div>
-<div id="button" class="scroll-down" onclick="scrollWin(0,1000)"></div>
+<a href="#bottom" class="sliding-link"><div id="button" class="scroll-down"></div></a>
 <!-- Footer -->
       <!--<section id="footer">
         <ul class="icons">
@@ -509,47 +510,37 @@ body{background-color:#000; overflow:hidden;}
   <!-- End Contact Section -->
   <!--/div-->
 </section>
-<br><br><br><br><br><br>
-<section>
-      <div class="mapouter">
-          <div class="gmap_canvas">
-            <iframe src="https://maps.google.com/maps?q=Vit%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" width="530" height="500" frameborder="0" style="border:0"></iframe>
-            <!--a href="https://www.embedgooglemap.org">embedgooglemap.org</a
-              NOT REQUIRED !! -->
-          </div>
-            <style>
+<br><br><br><br><br><br><br><br><br><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<section class = "section-responsive">
+     <div  class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0407858779113!2d80.15124497915374!3d12.840640990986262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259af8e491f67%3A0x944b42131b757d2d!2sVIT%20Chennai!5e0!3m2!1sen!2sin!4v1570773064742!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+     </div>
+<style>
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+.section-responsive{
+  @media screen and (max-width: width 830px;) {
+    position: bottom;
+    
+  }
+}
+  </style>
 
-              .gmap_canvas {
-                position: relative;
-                padding-bottom: 75%; // This is the aspect ratio
-                height: 0;
-                overflow: hidden;
-                }
 
-
-                /*@media on screen (max-width: 750px;){
-                  .mapouter{
-                    height:100px!important;
-                    width:1000px!important;
-                  }
-                we can do it without this
-                */
-              .gmap_canvas iframe {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100% !important;
-                  height: 100% !important;
-                }
-
-              }
-
-            </style>
-        </div>
-       <br /> <br /><br />
 </section>
 
-<section>
+<section class="section-responsive" id="bottom">
   <footer class="footer-distributed">
         <div class="footer-left">
           <img src="images/logosmall.jpg" height=35% width=35% alt="VITCMUN">
